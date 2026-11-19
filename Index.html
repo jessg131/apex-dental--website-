@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Dental Growth | Automated Patient Reactivation</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: #f8fafc; color: #1e293b; margin: 0; line-height: 1.6; }
+    .container { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+    
+    /* Header */
+    header { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 16px 0; position: sticky; top: 0; z-index: 10; }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 20px; font-weight: 800; color: #0f172a; letter-spacing: -0.5px; }
+    .logo span { color: #2563eb; }
+    
+    /* Buttons */
+    .btn { background: #2563eb; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; display: inline-block; transition: background 0.2s; }
+    .btn:hover { background: #1d4ed8; }
+    .btn-outline { background: transparent; color: #2563eb; border: 2px solid #2563eb; margin-left: 10px; }
+    .btn-outline:hover { background: #eff6ff; }
+
+    /* Hero */
+    .hero { text-align: center; padding: 75px 20px 60px; }
+    .badge { display: inline-block; background: #dbeafe; color: #1e40af; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .hero h1 { font-size: 40px; line-height: 1.2; color: #0f172a; max-width: 820px; margin: 0 auto 20px; letter-spacing: -0.5px; }
+    .hero p { font-size: 18px; color: #475569; max-width: 660px; margin: 0 auto 32px; }
+    .hero-sub { font-size: 13px; color: #64748b; margin-top: 14px; }
+
+    /* Sections & Cards */
+    .section { background: #fff; padding: 60px 20px; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
+    .section-title { text-align: center; font-size: 28px; color: #0f172a; margin-top: 0; margin-bottom: 10px; }
+    .section-subtitle { text-align: center; color: #64748b; max-width: 600px; margin: 0 auto 40px; }
+    .grid { display: flex; gap: 24px; flex-wrap: wrap; }
+    .box { flex: 1; min-width: 260px; background: #f8fafc; padding: 26px; border-radius: 10px; border: 1px solid #e2e8f0; }
+    .box h3 { margin-top: 0; color: #0f172a; }
+
+    /* SMS Demo Preview */
+    .demo-wrap { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; padding: 60px 20px; }
+    .demo-text { flex: 1; min-width: 300px; }
+    .phone-mock { flex: 1; min-width: 300px; max-width: 380px; margin: 0 auto; background: #fff; border: 1px solid #cbd5e1; border-radius: 20px; padding: 20px; box-shadow: 0 10px 25px rgba(15,23,42,0.08); }
+    .phone-header { text-align: center; font-size: 13px; font-weight: bold; color: #64748b; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 15px; }
+    .msg { padding: 10px 14px; border-radius: 14px; font-size: 14px; margin-bottom: 10px; max-width: 82%; }
+    .msg-ai { background: #eff6ff; color: #1e293b; border-bottom-left-radius: 4px; }
+    .msg-patient { background: #2563eb; color: #fff; margin-left: auto; border-bottom-right-radius: 4px; }
+
+    /* ROI Box */
+    .roi { background: #0f172a; color: #fff; padding: 48px 30px; border-radius: 14px; margin: 20px auto 60px; text-align: center; }
+    .roi h2 { margin-top: 0; font-size: 28px; }
+    .roi-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 25px; }
+    .roi-stat { background: #1e293b; padding: 18px 24px; border-radius: 8px; min-width: 180px; }
+    .roi-stat strong { display: block; font-size: 26px; color: #60a5fa; }
+    .roi-stat span { font-size: 14px; color: #cbd5e1; }
+
+    /* FAQ */
+    .faq { max-width: 740px; margin: 60px auto; padding: 0 20px; }
+    .faq-item { background: #fff; padding: 20px 24px; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 14px; }
+    .faq-item strong { display: block; font-size: 16px; color: #0f172a; margin-bottom: 6px; }
+    .faq-item p { margin: 0; color: #475569; font-size: 15px; }
+
+    /* Footer */
+    footer { text-align: center; padding: 60px 20px; background: #fff; border-top: 1px solid #e2e8f0; }
+    footer h2 { margin-top: 0; font-size: 28px; color: #0f172a; }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 28px; }
+      .btn-outline { margin-left: 0; margin-top: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="logo">Apex<span>Dental</span>Growth</div>
+      <a href="https://calendly.com/team-apexdentalgrowth/30min" target="_blank" class="btn">Book 15-Min Demo</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="badge">For Cosmetic &amp; Implant Dental Practices</div>
+      <h1>Turn Your Dormant Patient List Into Booked High-Ticket Consultations — Without Spending $1 on Ads</h1>
+      <p>Our AI Patient Reactivation Engine automatically follows up with unscheduled treatment plans and past patients via conversational SMS, books veneer and implant consults straight onto your calendar, and generates 5-star Google reviews on autopilot.</p>
+      <a href="https://calendly.com/team-apexdentalgrowth/30min" target="_blank" class="btn">Schedule Your 15-Minute Live Demo</a>
+      <div class="hero-sub">No ad spend required • Zero extra work for your front desk • Performance-backed setup</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">How We Fill Your Chair in 3 Simple Steps</h2>
+      <p class="section-subtitle">Your practice is already sitting on thousands of dollars in unscheduled treatment. We unlock it automatically.</p>
+      <div class="grid">
+        <div class="box">
+          <h3>1. Smart Database Reactivation</h3>
+          <p>We safely reach out to past patients with unscheduled veneers, implants, Invisalign, or overdue hygiene visits using natural, personalized SMS check-ins.</p>
+        </div>
+        <div class="box">
+          <h3>2. 24/7 AI Concierge Booking</h3>
+          <p>When a patient replies, our dental-trained AI answers common questions (financing, insurance, availability) and books them directly into your open consult slots.</p>
+        </div>
+        <div class="box">
+          <h3>3. Automated 5-Star Reviews</h3>
+          <p>After every visit, patients receive a polite check-in text that guides happy patients to Google Reviews while routing concerns privately to your office manager.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container demo-wrap">
+    <div class="demo-text">
+      <h2 style="font-size: 28px; color: #0f172a; margin-top: 0;">Sounds Like Your Best Front Desk Coordinator</h2>
+      <p style="color: #475569;">Patients hate robotic mass-texts. Our AI holds natural, two-way conversations, overcomes common hesitations around cost and scheduling, and locks in qualified appointments while your team focuses on patients in the chair.</p>
+      <ul style="color: #334155; padding-left: 20px;">
+        <li>Instant replies in under 30 seconds, 24/7</li>
+        <li>Handles rescheduling and appointment reminders</li>
+        <li>Custom-trained on your doctors, pricing, and policies</li>
+      </ul>
+    </div>
+    <div class="phone-mock">
+      <div class="phone-header">SMS Preview • BrightSmile Dental</div>
+      <div class="msg msg-ai">Hi Sarah! It's Emma at BrightSmile Dental. Dr. Miller wanted me to check in—are you still thinking about getting those veneers done before summer?</div>
+      <div class="msg msg-patient">Hey! Yes actually, I just wasn't sure if you guys offer monthly payment plans?</div>
+      <div class="msg msg-ai">We do! We offer 0% APR financing options starting around $195/mo. Dr. Miller has a free 20-min consult open this Thursday at 2:30 PM or Friday at 10:00 AM. Want me to grab one for you?</div>
+      <div class="msg msg-patient">Thursday at 2:30 works great!</div>
+      <div class="msg msg-ai">You're all set for Thursday at 2:30 PM! I just texted over your confirmation. See you soon!</div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="roi">
+      <h2>Conservative Math From One Reactivation Campaign</h2>
+      <p style="color: #94a3b8; max-width: 600px; margin: 0 auto;">Even a small portion of your inactive database can produce immediate high-ticket case acceptance.</p>
+      <div class="roi-grid">
+        <div class="roi-stat">
+          <strong>500</strong>
+          <span>Dormant Patients Contacted</span>
+        </div>
+        <div class="roi-stat">
+          <strong>15–20</strong>
+          <span>Consultations Booked</span>
+        </div>
+        <div class="roi-stat">
+          <strong>4–6</strong>
+          <span>New High-Ticket Cases</span>
+        </div>
+        <div class="roi-stat">
+          <strong>$18,000+</strong>
+          <span>New Production Generated</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="faq">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <strong>How fast can we launch, and do you integrate with our software?</strong>
+      <p>We can launch within 48 hours. We integrate with major Practice Management Systems (Dentrix, Eaglesoft, Open Dental) or can run securely off a simple one-time patient list export with zero IT headaches.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Is the messaging HIPAA-compliant?</strong>
+      <p>Yes. Our infrastructure supports HIPAA compliance, and our AI is strictly trained never to discuss sensitive medical diagnoses or protected health details over SMS—focusing purely on scheduling and general clinic FAQs.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Will this create extra work for my front desk?</strong>
+      <p>None at all. The AI handles the back-and-forth texting, follow-ups, and reminders. Your front desk simply sees confirmed consultations appear on the schedule.</p>
+    </div>
+    <div class="faq-item">
+      <strong>What if we don't get any booked appointments?</strong>
+      <p>We stand behind our system. Ask about our 14-Day Pilot Guarantee on our demo call—if we don't put qualified consultations on your calendar, you don't pay.</p>
+    </div>
+  </section>
+
+  <footer>
+    <h2>See How Many Patients Are Hiding in Your Database</h2>
+    <p style="color: #475569; max-width: 540px; margin: 0 auto 25px;">Book a quick 15-minute walkthrough. We'll show you the AI live and map out your exact revenue potential.</p>
+    <a href="https://calendly.com/team-apexdentalgrowth/30min" target="_blank" class="btn">Book Your 15-Minute Demo</a>
+    <p style="font-size: 12px; color: #64748b; margin-top: 30px;">© 2026 Apex Dental Growth. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
